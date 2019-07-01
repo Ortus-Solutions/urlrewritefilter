@@ -4,10 +4,6 @@ branches:
     only:
         - master
 
-script:
-- cd target
-- ls
-
 deploy:
   # Upload binaries
   - provider: s3
