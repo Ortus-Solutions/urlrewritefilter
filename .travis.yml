@@ -3,7 +3,8 @@ language: java
 branches:
     only:
         - master
-
+script:
+- mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 deploy:
   # Upload binaries
   - provider: s3
@@ -15,5 +16,5 @@ deploy:
     secret_access_key: $AWS_ACCESS_SECRET
     bucket: "downloads.ortussolutions.com"
     local-dir: target
-    upload-dir: cfmlprojects
+    upload-dir: cfmlprojects/urlrewritefilter
     acl: public_read
