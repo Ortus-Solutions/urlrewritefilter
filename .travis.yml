@@ -18,5 +18,5 @@ deploy:
     secret_access_key: $AWS_ACCESS_SECRET
     bucket: "downloads.ortussolutions.com"
     local-dir: target/s3
-    upload-dir: cfmlprojects/urlrewritefilter
+    upload-dir: cfmlprojects/5.0.0-SNAPSHOT/urlrewritefilter
     acl: public_read
