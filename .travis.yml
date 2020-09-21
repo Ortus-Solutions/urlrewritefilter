@@ -13,10 +13,11 @@ deploy:
     on:
       branch:
         - master
+        - develop
     skip_cleanup: true
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_ACCESS_SECRET
     bucket: "downloads.ortussolutions.com"
     local-dir: target/s3
-    upload-dir: cfmlprojects/urlrewritefilter/5.0.0-SNAPSHOT
+    upload-dir: cfmlprojects/urlrewritefilter/5.0.1-SNAPSHOT
     acl: public_read
