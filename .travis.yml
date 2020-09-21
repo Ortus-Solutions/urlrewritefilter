@@ -3,6 +3,7 @@ language: java
 branches:
     only:
         - master
+        - develop
 script:
 - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 - mkdir target/s3
@@ -13,7 +14,6 @@ deploy:
     on:
       branch:
         - master
-        - develop
     skip_cleanup: true
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_ACCESS_SECRET
